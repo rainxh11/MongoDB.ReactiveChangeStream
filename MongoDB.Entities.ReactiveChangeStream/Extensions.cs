@@ -1,21 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq.Expressions;
 using System.Reactive.Linq;
 using System.Threading;
 using MongoDB.Driver;
-using MongoDB.Entities;
 
 namespace MongoDB.Entities.ReactiveChangeStream;
 
 /// <summary>
-/// Reactive Extension for MongoDB Entities Change Streams
+///     Reactive Extension for MongoDB Entities Change Streams
 /// </summary>
 public static class Extensions
 {
     /// <summary>
-    /// Convert Watcher OnChangesCSD Event to IObservable. 
-    /// Make sure to start the Watcher
+    ///     Convert Watcher OnChangesCSD Event to IObservable.
+    ///     Make sure to start the Watcher
     /// </summary>
     /// <typeparam name="T"></typeparam>
     /// <param name="watcher">Watcher</param>
@@ -31,7 +29,7 @@ public static class Extensions
     }
 
     /// <summary>
-    /// Watch Current Entity for changes using its ID
+    ///     Watch Current Entity for changes using its ID
     /// </summary>
     /// <typeparam name="T"></typeparam>
     /// <param name="entity"></param>
@@ -40,10 +38,10 @@ public static class Extensions
     public static IObservable<ChangeStreamDocument<T>> ObserveChanges<T>(this T entity,
         CancellationToken ct = default) where T : IEntity
     {
-        var watcher = Entities.DB.Watcher<T>(nameof(T));
+        var watcher = DB.Watcher<T>(nameof(T));
 
         watcher.Start(EventType.Created | EventType.Deleted | EventType.Updated,
-            filter: x => x.DocumentKey == entity.ID,
+            x => x.DocumentKey == entity.ID,
             cancellation: ct);
 
         return watcher.ToObservableChangeStream();

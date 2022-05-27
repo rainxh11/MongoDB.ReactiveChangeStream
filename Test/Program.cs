@@ -37,7 +37,7 @@ foo
     })
     .Subscribe();
 
-class Foo : Entity
+internal class Foo : Entity
 {
     /*
      *

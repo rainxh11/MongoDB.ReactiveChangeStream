@@ -7,12 +7,12 @@ using MongoDB.Driver;
 namespace MongoDB.ReactiveChangeStream;
 
 /// <summary>
-/// Reactive Extension for MongoDB C# Driver Change Streams
+///     Reactive Extension for MongoDB C# Driver Change Streams
 /// </summary>
 public static class Extensions
 {
     /// <summary>
-    /// Create and start a Reactive Watcher
+    ///     Create and start a Reactive Watcher
     /// </summary>
     /// <typeparam name="T"></typeparam>
     /// <param name="database"></param>
@@ -55,7 +55,7 @@ public static class Extensions
     }
 
     /// <summary>
-    /// Create and start a Reactive Watcher
+    ///     Create and start a Reactive Watcher
     /// </summary>
     /// <typeparam name="T"></typeparam>
     /// <param name="database"></param>
@@ -98,7 +98,7 @@ public static class Extensions
     }
 
     /// <summary>
-    /// Create and start a Reactive Watcher
+    ///     Create and start a Reactive Watcher
     /// </summary>
     /// <typeparam name="T"></typeparam>
     /// <param name="collection"></param>
@@ -139,7 +139,7 @@ public static class Extensions
     }
 
     /// <summary>
-    /// Create and start a Reactive Watcher
+    ///     Create and start a Reactive Watcher
     /// </summary>
     /// <typeparam name="T"></typeparam>
     /// <param name="collection"></param>

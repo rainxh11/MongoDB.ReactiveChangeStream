@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/rainxh11/MongoDB.ReactiveChangeStream/master/assets/rxmongo.svg" width="300">
+<img src="https://raw.githubusercontent.com/rainxh11/MongoDB.ReactiveChangeStream/master/Assets/rxmongo.svg" width="300">
 
 |Package Name|Version|Downloads|
 |-|-|-|
