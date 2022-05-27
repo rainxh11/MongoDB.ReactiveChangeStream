@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<LangVersion>10.0</LangVersion>
+		<PackageIcon>rxmongo.png</PackageIcon>
+		<PackageReadmeFile>readme.md</PackageReadmeFile>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+		<OutputType>Library</OutputType>
+		<Version>1.0.0</Version>
+		<StartupObject />
+		<Authors>Chakhoum Ahmed (github.com/rainxh11)</Authors>
+		<Description>MongoDB Entities Change Stream Extension using Rx.NET</Description>
+		<Copyright>© 2022 Chakhoum Ahmed</Copyright>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+		<PackageProjectUrl>https://github.com/rainxh11/MongoDB.ReactiveChangeStream/tree/main/MongoDB.Entities.ReactiveChangeStream</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/rainxh11/MongoDB.ReactiveChangeStream/tree/main/MongoDB.Entities.ReactiveChangeStream</RepositoryUrl>
+		<RepositoryType>github</RepositoryType>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageTags>mongo;mongodb;nosql;changestream;rx;reactive;extension;entities</PackageTags>
+		<TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="..\Assets\rxmongo.png" Pack="true" PackagePath="\" />
+		<None Include="readme.md" Pack="true" PackagePath="\" />
+		<None Include="..\LICENSE" Pack="true" PackagePath="\" />
+    <PackageReference Include="MongoDB.Entities" Version="20.26.3" />
+    <PackageReference Include="System.Reactive" Version="5.0.0" />
+  </ItemGroup>
+
+	<Target DependsOnTargets="ResolveReferences" Name="CopyProjectReferencesToPackage">
+		<ItemGroup>
+			<BuildOutputInPackage Include="@(ReferenceCopyLocalPaths-&gt;WithMetadataValue('ReferenceSourceTarget', 'ProjectReference'))" />
+		</ItemGroup>
+	</Target>
+</Project>
