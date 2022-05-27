@@ -4,7 +4,7 @@ MongoDB Change Streams are a feature that allow the database to notify subscribe
 # Installation
 **First**, install the [`MongoDB.ReactiveChangeStream`](https://www.nuget.org/packages/MongoDB.ReactiveChangeStream) Nuget package into your app
 ```powershell
-PM> Install-Package MongoDB.ReactiveChangeStream
+Install-Package MongoDB.ReactiveChangeStream
 ```
 
 # Example Usage

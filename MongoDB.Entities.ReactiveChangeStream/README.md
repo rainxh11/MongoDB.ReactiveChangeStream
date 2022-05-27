@@ -9,7 +9,7 @@ A light-weight .net standard library with barely any overhead that aims to simpl
 # Installation
 **First**, install the [`MongoDB.Entities.ReactiveChangeStream`](https://www.nuget.org/packages/MongoDB.Entities.ReactiveChangeStream) Nuget package into your app
 ```powershell
-PM> Install-Package MongoDB.Entities.ReactiveChangeStream
+Install-Package MongoDB.Entities.ReactiveChangeStream
 ```
 
 # Example Usage
@@ -19,7 +19,7 @@ using System.Reactive.Linq;
 using MongoDB.Driver;
 using MongoDB.Entities;
 
-DB.InitAsync("foo", 
+await DB.InitAsync("foo", 
     MongoClientSettings.FromConnectionString("mongodb://localhost:27017/foo?replicaSet=rs0"));
 
 var changeObservable = DBEx.StartReactiveWatcher<Entity>();
@@ -39,7 +39,7 @@ using System.Reactive.Linq;
 using MongoDB.Driver;
 using MongoDB.Entities;
 
-DB.InitAsync("foo", 
+await DB.InitAsync("foo", 
     MongoClientSettings.FromConnectionString("mongodb://localhost:27017/foo?replicaSet=rs0"));
 
 var watcher = DB.Watcher<Entity>("watcher");
