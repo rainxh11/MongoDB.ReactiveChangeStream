@@ -3,7 +3,7 @@
 |Package Name|Version|Downloads|
 |-|-|-|
 |MongoDB.ReactiveChangeStream|[![Latest version](https://img.shields.io/nuget/v/MongoDB.ReactiveChangeStream.svg)](https://www.nuget.org/packages/MongoDB.ReactiveChangeStream/)|![Downloads](https://img.shields.io/nuget/dt/MongoDB.ReactiveChangeStream.svg)|
-|[MongoDB.Entities.ReactiveChangeStream](https://github.com/rainxh11/MongoDB.ReactiveChangeStream/tree/main/MongoDB.Entities.ReactiveChangeStream)|[![Latest version](https://img.shields.io/nuget/v/MongoDB.Entities.ReactiveChangeStream.svg)](https://www.nuget.org/packages/Entities.ReactiveChangeStream/)|![Downloads](https://img.shields.io/nuget/dt/MongoDB.Entities.ReactiveChangeStream.svg)|
+|[MongoDB.Entities.ReactiveChangeStream](https://github.com/rainxh11/MongoDB.ReactiveChangeStream/tree/master/MongoDB.Entities.ReactiveChangeStream)|[![Latest version](https://img.shields.io/nuget/v/MongoDB.Entities.ReactiveChangeStream.svg)](https://www.nuget.org/packages/Entities.ReactiveChangeStream/)|![Downloads](https://img.shields.io/nuget/dt/MongoDB.Entities.ReactiveChangeStream.svg)|
 
 
 # MongoDB.ReactiveChangeStream
