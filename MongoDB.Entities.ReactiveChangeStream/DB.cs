@@ -3,6 +3,7 @@ using System.Linq.Expressions;
 using System.Threading;
 using MongoDB.Driver;
 using MongoDB.Entities.ReactiveChangeStream;
+using MongoDB.Entities;
 
 namespace MongoDB.Entities;
 
@@ -26,6 +27,7 @@ public static class DBEx
         where T : IEntity
     {
         var watcher = DB.Watcher<T>(nameof(T));
+
         if (options == null)
             watcher.Start(EventType.Created | EventType.Deleted | EventType.Updated, filter, cancellation: ct);
         else options?.Invoke(watcher);
