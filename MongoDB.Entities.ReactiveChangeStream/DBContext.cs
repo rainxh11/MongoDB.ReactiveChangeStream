@@ -23,6 +23,7 @@ namespace MongoDB.Entities
         /// </summary>
         /// <typeparam name="T">The entity type to get a watcher for</typeparam>
         /// <param name="name">A unique name for the watcher of this entity type. Names can be duplicate among different entity types.</param>
+        /// <param name="database">Database name</param>
         public Watcher<T> Watcher<T>(string database, string name) where T : IEntity
         {
             if (_watchers.TryGetValue((database, name), out Watcher<IEntity> _watcher))
